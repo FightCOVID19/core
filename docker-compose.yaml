@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  core:
+    build: ./
+    ports:
+      - 5562:5562
+    command: python app/server.py
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
